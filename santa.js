@@ -4,21 +4,20 @@ const fs = require ('fs')
 fs.readFile('./directions.txt', (err, data) =>{
 	console.time('timer')
 	if(err){
-		console.log(err)
-	}
-	// let string = 
-	let arr = Array.from(data.toString())
-	let i = 0
+		console.log(err);
+	};
+	let arr = Array.from(data.toString());
+	let floor = 0;
 
 	arr.map(direction => {
 		if (direction === '('){
-			i++
+			floor++;
 		} else {
-			i--
-		}
-	})
+			floor--;
+		};
+	});
 
-	console.log('map', i)
+	console.log('map', floor);
 	console.timeEnd('timer');
 
 })
