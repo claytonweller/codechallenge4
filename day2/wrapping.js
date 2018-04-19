@@ -33,7 +33,7 @@ const allTheRibbon = (data) =>{
 	let dimensionArray = allPresentsParameters(presents)
 	let totals = individualRibbons(dimensionArray)
 	let grandTotal = addAllValues(totals)
-	return grandTotal
+	return 'Ribbon: '+ grandTotal
 } 
 
 
@@ -75,11 +75,11 @@ const wrappingTotal = (data) => {
 	let areaArrayAmmended = ammendAllPresents(areaArray)
 	let individualTotals = addEachPresent(areaArrayAmmended)
 	let grandTotal = addAllValues(individualTotals)
-	return grandTotal
+	return 'Wrapping: '+ grandTotal
 }
 
 
-// useFile(wrappingTotal, './presentList.txt')
+useFile(wrappingTotal, './presentList.txt')
 
 
 
