@@ -45,11 +45,11 @@ const totalHousesVisited = (data) =>{
 	vistedHouses.sort()
 	removeDuplicates(vistedHouses)
 
-	return vistedHouses.length
+	return 'Santa Solo: '+ vistedHouses.length
 
 }
 
-// useFile(totalHousesVisited, './input.txt')
+useFile(totalHousesVisited, './input.txt')
 
 const santaCoordinates = (arr) => arr.map((coordinate,i)=>{
 	if(i%2===0){
@@ -81,7 +81,6 @@ const santaHouses = (coordinateMoves) =>{
 	allLocations (santaArr)
 	vistedHouses.sort()
 	removeDuplicates(vistedHouses)
-	console.log('santa', vistedHouses.length)
 	return vistedHouses
 }
 
@@ -98,7 +97,6 @@ const roboHouses = (coordinateMoves) =>{
 	allLocations (roboArr)
 	vistedHouses.sort()
 	removeDuplicates(vistedHouses)
-	console.log('robo', vistedHouses.length)
 	return vistedHouses	
 }
 
@@ -111,7 +109,7 @@ const roboSantaTotal = (data) =>{
 	vistedHouses.sort()
 	removeDuplicates(vistedHouses)
 
-	return vistedHouses.length
+	return 'Santa + Robo: ' + vistedHouses.length
 
 }
 
